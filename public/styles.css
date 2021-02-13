@@ -1,24 +1,186 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  html { /* stylelint-disable-line */
-    box-sizing: border-box;
-    overflow-x: hidden;
-  
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html { /* stylelint-disable-line */
+  background-color: #faebd7;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+main {
+  margin: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-size: 1.375rem;
+}
+
+.field input,
+.field textarea {
+  border: 1px solid #888;
+  border-radius: 3px;
+  max-width: 800px;
+  padding: 8px;
+}
+
+.field textarea {
+  flex: 1;
+  min-height: 6rem;
+}
+
+.field--invalid input {
+  background-color: #fbb;
+  border-color: #855;
+}
+
+.field--checkbox {
+  margin-left: 21em;
+  padding: 1rem;
+}
+
+.field--checkbox label {
+  align-items: center;
+  display: flex;
+  flex: initial;
+}
+
+.field--checkbox input {
+  margin-right: 1rem;
+  margin-top: 0.6em;
+  max-width: 4em;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid #888;
+  border-radius: 3px;
+  margin-bottom: 2em;
+  margin-left: 30em;
+  padding: 1em 2em;
+  transition: background-color ease-in 300ms;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+
+.errors {
+  margin-bottom: 2rem;
+}
+
+.form {
+  width: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+.error-title {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.error-list {
+  text-align: center;
+}
+
+table,
+td,
+th {
+  border: 1px solid #d3d3d3;
+}
+
+td,
+th {
+  height: 3em;
+}
+
+td {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.signature-table {
+  margin-top: 2em;
+}
+
+hr {
+  border: 1px dotted #d3d3d3;
+  width: 50%;
+}
+
+.signature-data {
+  width: 50%;
+}
+
+.signature-title {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.no-signatures {
+  margin-top: 2em;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .field {
+    flex-direction: row;
   }
 
-  .form {
-      display: flex;
-      flex-direction: column; 
-      margin-bottom: 1rem;
+  .field label {
+    flex: 0 0 200px;
   }
+
+  .field--checkbox label {
+    flex: initial;
+  }
+
+  .field input {
+    flex: 1;
+  }
+}

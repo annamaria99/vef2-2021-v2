@@ -41,8 +41,8 @@ const validations = [
     .withMessage('Kennitala á að vera á formi 000000-0000 eða 0000000000'),
 
   check('comment')
-    .isLength({ max: 100 })
-    .withMessage('Athugasemd má að hámrki vera 100 stafir'),
+    .isLength({ max: 400 })
+    .withMessage('Athugasemd má að hámrki vera 400 stafir'),
 ];
 
 const sanitazions = [
@@ -108,7 +108,7 @@ async function showErrors(req, res, next) {
   if (!validation.isEmpty()) {
     const errors = validation.array();
     data.errors = errors;
-    data.title = 'Undirskriftarlisti – vandræði';
+    data.title = 'Vandræði við undirskrift:';
 
     const result = await query('SELECT * FROM signatures');
     const { rows } = result;
