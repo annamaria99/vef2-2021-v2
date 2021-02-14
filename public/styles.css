@@ -69,28 +69,27 @@ main {
 }
 
 .field--checkbox {
-  margin-left: 21em;
   padding: 1rem;
+  text-align: center;
 }
 
 .field--checkbox label {
   align-items: center;
-  display: flex;
   flex: initial;
 }
 
 .field--checkbox input {
   margin-right: 1rem;
-  margin-top: 0.6em;
-  max-width: 4em;
 }
 
 button {
   background-color: #fff;
   border: 1px solid #888;
   border-radius: 3px;
+  display: block;
   margin-bottom: 2em;
-  margin-left: 30em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1em 2em;
   transition: background-color ease-in 300ms;
 }

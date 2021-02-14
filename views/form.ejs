@@ -15,8 +15,8 @@
       <label for="comment">Athugasemd:</label>
       <textarea type="text" id="comment" name="comment"><%= data.comment %></textarea><br>
   </div>
-  <div class="field field--checkbox">
-      <input type="checkbox" id="anonymous" name="anonymous" <%= (data.anonymous === true) ? 'checked' : '' %>>
+  <div class="field--checkbox">
+      <input class="field--checkbox" type="checkbox" id="anonymous" name="anonymous" <%= (data.anonymous === true) ? 'checked' : '' %>>
       <label for="anonymous">Ekki birta nafn á lista</label>
   </div>
   <% if (data.errors.length > 0) { %>
